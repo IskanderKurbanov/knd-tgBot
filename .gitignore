@@ -1,8 +1,5 @@
-/Include/*
-/Lib/*
-/Scripts/*
-/__pycache__/*
+/.venv/
+/.idea/
+.env
 
-pyvenv.cfg
-
-*_old.*
+*.pyc
