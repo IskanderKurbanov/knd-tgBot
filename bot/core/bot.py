@@ -13,14 +13,14 @@ dp = Dispatcher(storage=storage)
 async def setup_bot():
     """Настройка бота перед запуском"""
     #from bot.middlewares.admin_middleware import AdminMiddleware
-    from bot.handlers import message_handlers, user_handlers, admin_handlers
+    from bot.handlers import message_handlers, user_handlers #, admin_handlers
 
     # Подключение middleware
     #dp.message.middleware(AdminMiddleware())
 
     # Регистрация роутеров
     dp.include_router(user_handlers.router)
-    dp.include_router(admin_handlers.router)
+    #dp.include_router(admin_handlers.router)
     dp.include_router(message_handlers.router)
 
     # Установка команд бота

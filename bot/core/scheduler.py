@@ -10,7 +10,7 @@ scheduler = AsyncIOScheduler()  # Инициализация планировщ�
 async def send_notification():
     """Рассылка сообщений всем пользователям"""
     async with async_session() as session:
-        users = await session.execute(select(User))
+        users = await session.execute(select(User)) # FIXIT
         for user in users.scalars().all():
             await bot.send_message(
                 chat_id=user.user_id,
